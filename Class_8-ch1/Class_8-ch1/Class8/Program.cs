@@ -9,6 +9,11 @@ namespace Class_8_ch1
 {
     public class Program
     {
+        /// <summary>
+        /// Sort Hashtable By Value
+        /// </summary>
+        /// <param name="dirs"></param>
+        /// <returns></returns>
         public static List<DictionaryEntry> sort(Hashtable dirs)
         {
             var result = new List<DictionaryEntry>(dirs.Count);
@@ -36,7 +41,7 @@ namespace Class_8_ch1
 
         public static void Main(string[] args)
         {
-            /*Part 1*/
+            /*Part 1 File List*/
             Hashtable dirs = new Hashtable();
             try
             {
@@ -50,13 +55,25 @@ namespace Class_8_ch1
                 {
                     Console.WriteLine(entry.Key.ToString() + ":" + entry.Value.ToString());
                 }
-              
+
             }
             catch (Exception e)
             { Console.WriteLine(e.Message); }
 
 
-            /*Part 2*/
+            /*Part 2 MyCarculator*/
+
+            Console.ReadKey();
+
+            MyCarculator<double> test2 = new MyCarculator<double>();
+            double dd = test2.ADD(25.3, 5);
+            Console.WriteLine(dd);
+            MyCarculator<int> test1 = new MyCarculator<int>();
+            try 
+            { 
+                int gg = test1.Division(8, 5);
+                Console.WriteLine(gg);
+            }catch(DivideByZeroException e){}
 
             Console.ReadKey();
 

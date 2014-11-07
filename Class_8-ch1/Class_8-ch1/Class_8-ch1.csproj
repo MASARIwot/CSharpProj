@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileSearch.cs" />
-    <Compile Include="MyCarculator.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Class8\FileSearch.cs" />
+    <Compile Include="Class8\MyCarculator.cs" />
+    <Compile Include="Class8\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

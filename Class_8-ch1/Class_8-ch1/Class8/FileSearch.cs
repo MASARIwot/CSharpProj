@@ -12,6 +12,11 @@ namespace Class_8_ch1
 {
     public class FileSearch
     {
+        /// <summary>
+        /// This methood return Hashtable<NameOfFile,expansion>
+        /// </summary>
+        /// <param name="directory"></param>
+        /// <returns></returns>
         public static Hashtable fileSearch(string directory)
         {
             try
@@ -31,12 +36,18 @@ namespace Class_8_ch1
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                //Console.WriteLine(e.Message);
                 throw new Exception();
             }
 
         }/*fileSearch()*/
-
+        /// <summary>
+        /// this is additional meyhod for (@see) method fileSearch.
+        /// it*s create Hashtable<NameOfFile,expansion> from String 
+        /// this string he take from method fileSearch
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         private static Hashtable createCollectionOfFileName(string fileName)
         {   
             string[] strArr = fileName.Split(' ');
@@ -49,7 +60,11 @@ namespace Class_8_ch1
             }
             return resultCollection;
         }/*createCollectionOfFileName*/
-
+        /// <summary>
+        /// This method is serialize information from Hashtable to File
+        /// </summary>
+        /// <param name="tabelForSave"></param>
+        /// <param name="pathName"></param>
         public static void writeInFile(Hashtable tabelForSave, string pathName)
         {
             IFormatter formatter = new BinaryFormatter();
